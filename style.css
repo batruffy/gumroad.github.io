@@ -1,0 +1,1040 @@
+/* Importing the fonts from google fonts */
+
+/* Importing the local fonts */
+@font-face {
+  font-family: 'Mabry Bold';
+  src: url(./Fonts/mabry-bold-pro.woff2);
+}
+@font-face {
+  font-family: 'Mabry Medium';
+  src: url(./Fonts/mabry-medium-pro.woff2);
+}
+@font-face {
+  font-family: 'Mabry Regular';
+  src: url(./Fonts/mabry-regular-pro.woff2);
+}
+
+/* Resetting the Css....... */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* setting the root values */
+:root {
+  --fs-h1: 5rem;
+  --fs-h2: 3.5rem;
+  --fs-h3: 2rem;
+  --fs-h4: 1.4rem;
+  --fs-h5: 1.225rem;
+  --fs-h6: 0.9rem;
+  --fs-p: 1.7rem;
+  --fs-a: 1.4rem;
+  --fs-span: 1.4rem;
+  --main-color: rgb(255, 144, 232);
+  --second-main-color: rgb(255, 201, 0);
+  --dark-pink: rgb(178, 51, 134);
+  --light-pink: rgb(255, 144, 232);
+  --black: rgb(0, 0, 0);
+  --dark-yellow: rgb(255, 201, 0);
+  --dark-green: rgb(35, 160, 148);
+  --white: rgb(255, 255, 255);
+  --red: rgb(226, 68, 47);
+  --light-yellow: rgb(241, 243, 51);
+  --sky-blue: rgb(144, 168, 237);
+  --bg-color: ;
+}
+
+/* setting the style for all headers and paragraph........ */
+h1 {
+  font-family: Mabry Regular;
+  font-weight: 400;
+  font-size: var(--fs-h1);
+  text-transform: ;
+  margin-bottom: 45px;
+}
+h2 {
+  font-family: Mabry Regular;
+  font-size: clamp(1rem, 0.342rem + 3vw, 3rem);
+  font-weight: 500;
+}
+h3 {
+  font-family: Mabry Regular;
+  font-size: clamp(1rem, 0.342rem + 3vw, 3rem);
+  font-weight: 500;
+  margin-bottom: 45px;
+}
+h4 {
+  font-family: Mabry Regular;
+  font-size: var(--fs-h4);
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+h5 {
+  font-family: Mabry Regular;
+  font-size: var(--fs-h5);
+  font-weight: 500;
+}
+h6 {
+  font-family: Mabry Regular;
+  font-size: var(--fs-h6);
+  font-weight: 300;
+  color: ;
+  letter-spacing: ;
+  text-transform: ;
+}
+p {
+  font-family: Mabry Regular;
+  font-size: var(--fs-p);
+  font-weight: ;
+  color: ;
+  letter-spacing: ;
+  text-transform: ;
+  margin-bottom: 35px;
+}
+a {
+  font-family: Mabry Regular;
+  font-size: var(--fs-a);
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+span {
+  font-family: ;
+  font-size: ;
+  font-weight: ;
+  color: ;
+  letter-spacing: ;
+  text-transform: ;
+}
+li {
+  list-style: none;
+}
+
+/* Styling the Logo.... */
+.logo {
+  width: 100%;
+  height: auto;
+  padding: 2%;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Styling the Navbar.... */
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.navbar a {
+  font-size: 15px;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-list {
+  padding: 25px 25px;
+}
+.nav-item {
+  position: relative;
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: black;
+  transition: width 0.3s ease-out;
+}
+
+.nav-item:hover::before {
+  width: 100%;
+}
+
+.right-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-btn {
+  padding: 25px 50px;
+  border-left: 2px solid black;
+}
+
+.login-btn:hover {
+  background-color: var(--main-color);
+}
+
+.selling-btn {
+  border-left: 2px solid black;
+  padding: 25px 50px;
+  background-color: black;
+}
+.selling-btn:hover {
+  background-color: var(--main-color);
+}
+.selling-btn:hover a {
+  color: black;
+}
+
+.selling-btn a {
+  color: white;
+}
+
+/* Styling Landing Page...... */
+
+.landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  border-bottom: 2px solid black;
+}
+
+.left-page {
+  width: 50%;
+  height: 100%;
+  background-color: var(--main-color);
+  padding: 10%;
+}
+
+.landing-btn {
+  position: relative;
+  padding: 20px 60px;
+  width: max-content;
+  background-color: black;
+  border-radius: 4px;
+  z-index: 3;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.landing-btn:hover {
+  box-shadow: 6px 8px 0 0 var(--dark-yellow), 12px 16px 0 0 var(--red);
+}
+
+.landing-btn a {
+  color: white;
+}
+.header-tagline {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+}
+.right-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  background-color: var(--second-main-color);
+  border-left: 2px solid black;
+}
+
+.landing-image-div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+}
+
+.landing-image-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.first-tag-image,
+.second-tag-image,
+.third-tag-image {
+  position: absolute;
+  z-index: 7;
+}
+
+.first-tag-image {
+  width: 20%;
+  height: auto;
+  top: 20%;
+  right: 5%;
+}
+.second-tag-image {
+  width: 30%;
+  height: auto;
+  top: 60%;
+  left: 15%;
+}
+.third-tag-image {
+  top: 70%;
+  right: 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  height: auto;
+  border: 2px solid var(--black);
+  border-radius: 999em 999em 999em 999em;
+  padding: 10px 15px;
+  background-color: var(--white);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.third-tag-image:hover {
+  box-shadow: 6px 8px 0 0 var(--black);
+  transform: translate(-10px, -10px);
+}
+
+.first-tag-image img,
+.second-tag-image img {
+  width: 100%;
+  height: auto;
+}
+
+.third-tag-image img {
+  height: 45px;
+  width: auto;
+}
+.employee-name {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.employee-name h4 {
+  margin: 0;
+}
+
+.brush,
+.gumroad-gs {
+  position: absolute;
+}
+
+/* Styling the intro Section... */
+
+.intro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 6%;
+}
+
+.intro h3 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 0 18%;
+}
+
+.design-box {
+  width: 80%;
+  height: 50vh;
+  background-color: var(--dark-yellow);
+  border: 2px solid black;
+  border-radius: 999em 999em 999em 999em;
+  margin-top: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inside-box {
+  width: 93%;
+  height: 80%;
+  position: relative;
+  background-color: var(--dark-yellow);
+  border: 2px solid black;
+  border-radius: 999em 999em 999em 999em;
+}
+
+.top-idea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  transform: translate(0%, -50%);
+  padding: 25px;
+}
+.bottom-idea {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  transform: translate(0%, 50%);
+  padding: 25px;
+}
+
+.left-idea,
+.right-idea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-idea-text,
+.right-idea-text {
+  font-size: 25px;
+  padding: 0 35px;
+  font-family: Mabry Regular;
+  background-color: var(--dark-yellow);
+}
+/* Styling the tagline section..... */
+
+.tagline {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.left-tagline,
+.right-tagline {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.left-tagline {
+  background-color: var(--dark-pink);
+}
+
+.right-tagline {
+  border-left: 2px solid black;
+  background-color: var(--light-pink);
+}
+
+/* Styling the advertisement section..... */
+
+.advertisement {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid black;
+  position: relative;
+}
+
+.left-advertisement,
+.right-advertisement {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.left-advertisement {
+  background-color: var(--black);
+}
+
+.right-advertisement {
+  background-color: var(--dark-yellow);
+}
+
+.advertisement-image-div {
+  position: relative;
+}
+
+.advertisement-tagline {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(-10%, -35%);
+  background-color: var(--white);
+  padding: 25px;
+  border: 2px solid black;
+  border-radius: 25px 1px;
+  color: rgb(0, 0, 0, 0.7);
+}
+
+.advertisement-tagline h4 {
+  margin: 0;
+}
+
+.exciting {
+  position: absolute;
+  bottom: 0%;
+  right: 15%;
+  transform: translate(60%, 30%);
+  z-index: 4;
+}
+
+/* styling Making Own road section.... */
+
+.make-own-road {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 85px 25%;
+  background-color: var(--white);
+}
+
+.make-para {
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+.explore .ri-arrow-right-line {
+  padding: 0 0 0 15px;
+  font-weight: 700;
+}
+
+.explore {
+  position: relative;
+  font-family: Mabry Bold;
+}
+
+.explore::before {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: black;
+  transition: width 0.3s ease-out;
+}
+
+.explore:hover::before {
+  width: 100%;
+}
+
+/* Styling the selling section........ */
+
+.selling {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.left-selling,
+.right-selling {
+  width: 50%;
+  height: 100%;
+}
+
+.left-selling {
+  background-color: var(--dark-green);
+}
+
+.left-selling img {
+  padding: 0 10% 0 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.right-selling {
+  border-left: 2px solid black;
+  background-color: var(--white);
+  padding: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+}
+
+.sell-items {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sell-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.sell-item .ri-arrow-right-line {
+  font-size: 20px;
+}
+
+.sell-item-tagline h4 {
+  margin: 0;
+}
+
+/* Styling the profile card.... */
+
+.profile-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid black;
+}
+
+.profile-page .right-page {
+  border-left: none;
+  background-color: none;
+}
+.profile-page p {
+  font-size: 1.9rem;
+  margin-bottom: 45px;
+}
+.profile-page h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.max-bhai .right-page {
+  background-color: var(--light-pink);
+}
+.trendsvc-bhai .left-page {
+  background-color: var(--dark-yellow);
+}
+
+.stephsmithio-ben {
+  border-top: 2px solid black;
+}
+
+.stephsmithio-ben .left-page {
+  background-color: var(--dark-pink);
+  color: white;
+}
+.stephsmithio-ben .right-page {
+  background-color: var(--dark-pink);
+}
+
+/*  Styling the Selling to anyone section....  */
+
+.sell-to-anyone {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid black;
+}
+
+.left-selling {
+  width: 50%;
+  height: 100%;
+  background-color: var(--black);
+  padding: 5%;
+}
+
+.left-selling img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.right-selling {
+  width: 50%;
+  height: 100%;
+}
+
+.sell-to-anyone h2 {
+  margin-bottom: 45px;
+}
+
+/* Styling the Sell Anywhere section...  */
+
+.sell-anywhere {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid black;
+}
+
+.sell-anywhere .left-selling {
+  background-color: var(--dark-green);
+}
+
+.sell-anywhere h2 {
+  margin-bottom: 45px;
+}
+
+/* Styling the what to sell section...... */
+
+.what-to-sell {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 85px;
+  gap: 45px 0;
+}
+
+.boxes {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 25px;
+}
+
+.box {
+  width: calc(33% - 25px);
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: var(--dark-green);
+  padding: 25px;
+  border-radius: 10px;
+  gap: 10px;
+  border: 2px solid black;
+}
+
+.box img {
+  width: 100px;
+}
+.box h4 {
+  margin-bottom: 5px;
+  font-weight: 200;
+}
+.box h5 {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.box h6 {
+  margin-bottom: 10px;
+  font-family: Mabry Regular;
+  font-size: 1rem;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.tags a {
+  font-size: 1rem;
+  background-color: white;
+  padding: 5px 8px;
+  border-radius: 999rem;
+  border: 1px solid black;
+  transition: all 0.01s;
+}
+
+.tags a:hover {
+  box-shadow: 2px 2px 0 0 var(--black);
+  transform: translate(-2px, -2px);
+}
+
+.box-2,
+.box-9,
+.box-11,
+.box-15 {
+  background-color: var(--red);
+}
+.box-4,
+.box-14,
+.box-12 {
+  background-color: var(--light-yellow);
+}
+.box-5,
+.box-16,
+.box-10 {
+  background-color: var(--dark-yellow);
+}
+.box-6,
+.box-8,
+.box-17 {
+  background-color: var(--sky-blue);
+}
+
+/* Sell Number section..... */
+
+.sell-number {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10%;
+}
+
+.coin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.coin-1 {
+  top: 0;
+  left: 15%;
+}
+.coin-2 {
+  top: 30%;
+  left: 3%;
+}
+.coin-3 {
+  top: 15%;
+  right: 0%;
+}
+.coin-4 {
+  top: 80%;
+  left: 15%;
+}
+.coin-5 {
+  top: 70%;
+  right: -5%;
+}
+.sell-number p {
+  padding: 0 25%;
+  text-align: center;
+}
+
+.sell-numbers {
+  font-size: 13rem;
+}
+
+/* Styling the Big image section.... */
+
+.bg-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid black;
+}
+
+.bg-image img {
+  aspect-ratio: 16/9;
+  vertical-align: bottom;
+}
+
+/* Styling the Share your work section...... */
+
+.share-work {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--light-pink);
+  padding: 5%;
+}
+
+.share-work h1 {
+  margin: 0;
+}
+
+.share-work-btn {
+  position: relative;
+  margin-top: 45px;
+  padding: 20px 55px;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+/* .share-work-btn::before {
+  content: '';
+  position: absolute;
+  top: -2%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark-yellow);
+  z-index: -8;
+  border-radius: 4px;
+  transition: all .5s;
+}
+.share-work-btn::after {
+  content: '';
+  position: absolute;
+  top: -2%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--red);
+  z-index: -6;
+  border-radius: 4px;
+  transition: all .5s;
+} */
+
+.share-work-btn:hover {
+  box-shadow: 6px 8px 0 0 var(--dark-yellow), 12px 16px 0 0 var(--red);
+}
+
+.share-work-btn h4 {
+  margin: 0;
+}
+
+/* styling the footer Section.... */
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  padding: 4% 0;
+}
+
+.footer .logo {
+  padding: 2%;
+}
+
+.footer-content {
+  width: 100%;
+  padding: 5% 10% 5% 3%;
+  color: white;
+  display: flex;
+  padding-right: 10%;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.left-footer {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+
+.email-button {
+  width: 100%;
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.email-button input {
+  width: 85%;
+  padding: 25px;
+  line-height: 25px;
+  outline: none;
+  font-size: 20px;
+  font-family: Mabry Regular; 
+}
+
+input::placeholder {
+  font-size: 20px;
+  font-family: Mabry Regular;
+  color: black;
+}
+
+.email-button .right-arrow {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-pink);
+  border-left: 2px solid black;
+  color: black;
+  font-size: 35px;
+}
+
+.center-footer,
+.right-footer {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-content h3 {
+  font-size: 2rem;
+}
+.footer-content a {
+  font-size: 1rem;
+  color: white;
+  transition: all .3s;
+}
+.footer-content a:hover {
+  color: var(--light-pink);
+}
+
+.end-footer{
+  color: white;
+  padding: 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.left-end-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  gap: 25px;
+}
+
+
+
+.left-end-footer img{
+  height: 45px;
+  width: auto;
+}
+
+
+.footer-name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.social-links a{
+  padding: 0 45px;
+  font-size: 45px;
+}
+.social-links a:hover i{
+color: var(--light-pink);
+}
+.social-links i{
+  color: white;
+}
